@@ -16,6 +16,7 @@ const Home = () => {
 		if (!term.trim()) return;
 		router.push(`/search?term=${term.trim()}`);
 	};
+	
 	return (
 		<div>
 			<Head>
