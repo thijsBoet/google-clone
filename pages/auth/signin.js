@@ -6,19 +6,19 @@ const signin = ({ providers }) => {
 	return (
 		<div>
 			<Header />
-			<div className='flex justify-center items-center'>
+			<div className='mt-40'>
 				{Object.values(providers).map(provider => {
 					return (
-						<div href={provider.signInUrl} key={provider.name}>
+						<div className='flex flex-col items-center' href={provider.signInUrl} key={provider.name}>
 							<img
-								className='h-14'
+								className='h-24 object-cover'
 								src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png'
 								alt='Google logo'
 							/>
-							<p className='text-sm italic'>
+							<p className='text-sm italic my-10 text-center'>
 								This website is created for learning purposes
 							</p>
-							<button onClick={() => signIn(provider.id, { callbackUrl: '/' })}>
+							<button className='bg-red-400 text-white rounded-lg p-3 hover:bg-red-500' onClick={() => signIn(provider.id, { callbackUrl: '/' })}>
 								Sign in with {provider.name}
 							</button>
 						</div>
