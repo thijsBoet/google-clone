@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import Body from '../components/Body';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import { SearchIcon, MicrophoneIcon } from '@heroicons/react/solid';
@@ -15,8 +14,6 @@ export default function Home() {
 			</Head>
 
 			<Header />
-
-			<Body />
 
 			<form className='flex flex-col items-center mt-40'>
 				<Image
